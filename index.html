@@ -5,13 +5,39 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="app.css">
 		<script src="app.js"></script>
-		<script src="js/controllers/moviecontroller.js"></script>
 	</head>
 	<body>
-		<div nd-app="movieApp">
-			<div ng-controller="movieController">
-
-			</div>
+		<div ng-app="movieApp" ng-controller="movieController">
+			
+				Search for a movie:
+				<input placeholder="Movie Title" ng-model="title">
+				<button ng-click="search();">Search</button>
+				<br>
+				<br>
+				<ul ng-repeat="item in result">
+					<img ng-src="{{ item.posters.profile }}">
+					<br>
+					<br>
+					<li>ID: {{ item.id }}</li>
+					<br>
+					<br>
+					<li>Movie Title: {{ item.title }}</li>
+					<br>
+					<br>
+					<li>Year: {{ item.year }}</li>
+					<br>
+					<br>
+					<li>Rating: {{ item.mpaa_rating }}</li>
+					<br>
+					<br>
+					<li>Length: {{ item.runtime }}</li>
+					<br>
+					<br>
+					<li>From the Critics: <p>{{ item.critics_consensus }}</p></li>
+					<br>
+					<br>
+				</ul>
+			
 		</div>
 	</body>
 </html>
