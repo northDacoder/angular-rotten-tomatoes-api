@@ -26,11 +26,7 @@ app.factory('rotten_tomatoes', function($resource){
 app.controller('movieController', function($scope, rotten_tomatoes){
 
 	rotten_tomatoes.fetchMovie(function(data){
-		console.log("Yo bro, movie is Dark Knight");
 		var result = data.movies; 
-		var movie = result[0].title; 
-		console.log(movie);
-		$scope.movie = movie;
 		$scope.result = result;
 	});
 });
