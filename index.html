@@ -14,23 +14,19 @@
 			
 			<div class="jumbotron">
 				<h1>Search for a movie:</h1>
-				<input placeholder="Movie Title" ng-model="searchText">
+				<input placeholder="Movie Title" ng-model="title">
 				<button type="button" class="btn btn-danger" ng-click="search();">Search</button>
 			</div>
 
 
 			<div class="row">
-				<ul ng-repeat="item in result" class="col-xs-4">
+				<ul ng-repeat="item in result" class="col-xs-12 col-sm-4">
 					<img ng-src="{{ item.posters.profile }}">
-							<br>
-					<li><h1>Movie Title: {{ item.title }}</h1></li>
-							<br>
-					<li><h1>Year: {{ item.year }}</h1></li>
-							<br>
-					<li><h1>Rating: {{ item.mpaa_rating }}</h1></li>
-							<br>
-					<li><h1>Length: {{ item.runtime }}</h1></li>
-							<br>
+					<li><h1 class="btn btn-default">Movie Title: {{ item.title }}</h1></li>
+					<li><h1 class="btn btn-info">Year: {{ item.year }}</h1></li>
+					<li><h1 class="btn btn-danger">Rating: {{ item.mpaa_rating }}</h1></li>
+					<li><h1 class="btn btn-primary">Length: {{ item.runtime }}</h1></li>
+					<br>
 					<li>From the Critics: <p>{{ item.critics_consensus }}</p></li>
 				</ul>
 			</div>

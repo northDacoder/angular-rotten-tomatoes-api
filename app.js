@@ -3,7 +3,8 @@ var app = angular.module("movieApp", ['ui.bootstrap', 'ngResource']);
 app.factory('rotten_tomatoes', function($resource){
 
 	return {
-		fetchMovie: function(callback){
+		fetchMovie: function(query, callback){
+			var search_query = query;
 
 			var api = $resource('http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=:key&q=:movie_title&page_limit=5&callback=JSON_CALLBACK', {
 				key: 'dpjxf3xsjbpj5wpmduveeseb',
@@ -12,7 +13,7 @@ app.factory('rotten_tomatoes', function($resource){
 				fetch:{method:'JSONP'}
 			});
 
-			api.fetch(function(response){
+			api.fetch({movie_title: search_query}, function(response){
 
 				callback(response);
 
@@ -24,9 +25,15 @@ app.factory('rotten_tomatoes', function($resource){
 
 app.controller('movieController', function($scope, rotten_tomatoes){
 
-	rotten_tomatoes.fetchMovie(function(data){
-		var result = data.movies; 
-		$scope.result = result;
-		
-	});
+	$scope.title = "";
+
+	$scope.search = function() {
+		var query = $scope.title;
+
+		rotten_tomatoes.fetchMovie(query, function(data){
+			console.log(data);
+			var result = data.movies;
+			$scope.result = result;
+		});
+	}
 });
