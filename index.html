@@ -1,32 +1,40 @@
 <!doctype html>
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="app.css">
+
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="app.css">
+		<script src="js/ui-bootstrap-tpls-0.10.0.min.js"></script>
 		<script src="app.js"></script>
 	</head>
 	<body>
 		<div ng-app="movieApp" ng-controller="movieController">
 			
-				Search for a movie:
-				<input placeholder="Movie Title" ng-model="title">
-				<button ng-click="search();">Search</button>
-				<br>
-				<br>
-				<ul ng-repeat="item in result">
+			<div class="jumbotron">
+				<h1>Search for a movie:</h1>
+				<input placeholder="Movie Title" ng-model="searchText">
+				<button type="button" class="btn btn-danger" ng-click="search();">Search</button>
+			</div>
+
+
+			<div class="row">
+				<ul ng-repeat="item in result" class="col-xs-4">
 					<img ng-src="{{ item.posters.profile }}">
-					<br>
+							<br>
 					<li><h1>Movie Title: {{ item.title }}</h1></li>
-					<br>
+							<br>
 					<li><h1>Year: {{ item.year }}</h1></li>
-					<br>
+							<br>
 					<li><h1>Rating: {{ item.mpaa_rating }}</h1></li>
-					<br>
+							<br>
 					<li><h1>Length: {{ item.runtime }}</h1></li>
-					<br>
+							<br>
 					<li>From the Critics: <p>{{ item.critics_consensus }}</p></li>
 				</ul>
+			</div>
+
 		</div>
 	</body>
 </html>

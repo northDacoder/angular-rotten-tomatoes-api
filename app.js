@@ -1,4 +1,4 @@
-var app = angular.module("movieApp", ['ngResource']);
+var app = angular.module("movieApp", ['ui.bootstrap', 'ngResource']);
 
 app.factory('rotten_tomatoes', function($resource){
 
@@ -7,7 +7,7 @@ app.factory('rotten_tomatoes', function($resource){
 
 			var api = $resource('http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=:key&q=:movie_title&page_limit=5&callback=JSON_CALLBACK', {
 				key: 'dpjxf3xsjbpj5wpmduveeseb',
-				movie_title: 'Batman'
+				movie_title: 'Batman',
 			}, {
 				fetch:{method:'JSONP'}
 			});
