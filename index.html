@@ -34,8 +34,8 @@
 			<div class="container">
 				<div class="row">
 					<ul ng-repeat="item in result" class="col-xs-12 col-sm-4 list-group">
-						<li class="list-group-item"><center><img ng-src="{{ item.posters.original }}" class="img-circle" style="height: 100px; width: 100px;"></center></li>
-						<li class="list-group-item"><strong><i class="fa fa-film"></i> Movie Title:</strong> {{ item.title }}</li>
+						<li class="list-group-item"><center><img ng-src="{{ item.posters.original }}" class="img-circle" style="height: 100px; width: 100px;"></center>
+						<br><h1 class="text-center"><strong><i class="fa fa-film"></i> Movie Title</strong></h1><br><p class="text-center">{{ item.title }}</p></li>
 						<li class="list-group-item"><strong>Year:</strong> {{ item.year }}</li>
 						<li class="list-group-item"><strong>Rating:</strong> {{ item.mpaa_rating }}</li>
 						<li class="list-group-item"><strong>Length:</strong> {{ item.runtime }} minutes</li>
