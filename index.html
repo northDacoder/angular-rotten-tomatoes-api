@@ -40,8 +40,13 @@
 								<h4 class="text-center panel-title">{{ item.title }}</h4>
 							</div>
 						</div>
-						<div class="panel panel-defaul">
-							Year: <p class="lead pull-right">{{ item.year }}</p></li>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3>Year</h3>
+							</div>
+							<div class="panel-body">
+								<p class="lead">{{ item.year }}</p>
+							</div>
 							<i class="fa fa-film"></i> Rated: {{ item.mpaa_rating }}
 							Length: <p class="lead pull-right">{{ item.runtime }} minutes
 							<i class="fa fa-star"></i> Critics Rating: {{ item.ratings.critics_rating }}
