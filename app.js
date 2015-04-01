@@ -27,8 +27,8 @@ app.factory('rotten_tomatoes', function($resource){
 
 app.controller('movieController', function($scope, rotten_tomatoes){
 
-	$scope.title = "";
-	$scope.limit = "";
+	$scope.title = "harry potter";
+	$scope.limit = "10";
 
 	$scope.search = function() {
 		var query = $scope.title;
@@ -42,5 +42,5 @@ app.controller('movieController', function($scope, rotten_tomatoes){
 		});
 	}
 	
-	search("Harry Potter", 10);
+	search();
 });
