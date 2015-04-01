@@ -34,12 +34,10 @@
 			<div class="container">
 				<div class="row">
 					<div ng-repeat="item in result" class="col-sm-4">
-						<div class="panel panel-default">
-							<center><img ng-src="{{ item.posters.original }}" class="img-circle" style="height: 100px; width: 100px;"></center>
-						</div>
+						<center><img ng-src="{{ item.posters.original }}" class="img-circle" style="height: 100px; width: 100px;"></center>
 						<div class="panel panel-primary">
 							<div class="panel-heading">
-								<h4 class="panel-title">{{ item.title }}</h4>
+								<h4 class="text-center panel-title">{{ item.title }}</h4>
 							</div>
 						</div>
 						<div class="panel panel-defaul">
