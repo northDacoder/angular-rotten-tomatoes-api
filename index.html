@@ -13,11 +13,15 @@
 		<div ng-app="movieApp" ng-controller="movieController">
 			
 			<div class="jumbotron">
-				<h1>Search for a movie:</h1>
-				<h4>Go ahead, I dare you.</h4>
-				<input placeholder="Movie Title" ng-model="title" class="form-control">
-				<input placeholder="Number of results" ng-model="limit" class="form-control">
-				<button type="button" class="btn btn-info btn-lg" ng-click="search();">Search</button>
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3">
+						<h1>Search for a movie:</h1>
+						<h4>Go ahead, I dare you.</h4>
+						<input placeholder="Movie Title" ng-model="title" class="input-lg form-control">
+						<input placeholder="Number of results" ng-model="limit" class="input-lg form-control">
+						<button type="button" class="btn btn-info btn-block btn-lg" ng-click="search();">Search</button>
+					</div>
+				</div>
 			</div>
 
 			<div class="container">
