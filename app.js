@@ -3,9 +3,9 @@ var app = angular.module("movieApp", ['ui.bootstrap', 'ngResource']);
 app.factory('rotten_tomatoes', function($resource){
 
 	return {
-		fetchMovie: function(query, nummovies, callback){
-			var search_query = query;
-			var search_limit = nummovies-1;
+		fetchMovie: function(movie, number, callback){
+			var query = movie;
+			var limit = number - 1;
 
 
 			var api = $resource('http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=:key&q=:movie_title&page_limit=:limit&callback=JSON_CALLBACK', {
@@ -15,7 +15,7 @@ app.factory('rotten_tomatoes', function($resource){
 				fetch:{method:'JSONP'}
 			});
 
-			api.fetch({movie_title: search_query, limit: search_limit}, function(response){
+			api.fetch({movie_title: query, limit: limit}, function(response){
 
 				callback(response);
 
