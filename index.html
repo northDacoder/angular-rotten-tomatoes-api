@@ -20,16 +20,17 @@
 				<button type="button" class="btn btn-danger" ng-click="search();">Search</button>
 			</div>
 
-
-			<div class="row">
-				<ul ng-repeat="item in result" class="col-xs-12 col-sm-4 list-group">
-					<li><img ng-src="{{ item.posters.profile }}"></li>
-					<li class="list-group-item">Movie Title: {{ item.title }}</li>
-					<li class="list-group-item">Year: {{ item.year }}</li>
-					<li class="list-group-item">Rating: {{ item.mpaa_rating }}</li>
-					<li class="list-group-item">Length: {{ item.runtime }}</li>
-					<li class="list-group-item">From the Critics: {{ item.critics_consensus }}</li>
-				</ul>
+			<div class="container">
+				<div class="row">
+					<ul ng-repeat="item in result" class="col-xs-12 col-sm-4 list-group">
+						<li class="list-group-item"><img ng-src="{{ item.posters.profile }}" class="img-circle"></li>
+						<li class="list-group-item">Movie Title: {{ item.title }}</li>
+						<li class="list-group-item">Year: {{ item.year }}</li>
+						<li class="list-group-item">Rating: {{ item.mpaa_rating }}</li>
+						<li class="list-group-item">Length: {{ item.runtime }}</li>
+						<li class="list-group-item">From the Critics: {{ item.critics_consensus }}</li>
+					</ul>
+				</div>
 			</div>
 
 		</div>
