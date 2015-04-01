@@ -36,7 +36,7 @@
 					<ul ng-repeat="item in result" class="col-xs-12 col-sm-4 list-group">
 						<li class="list-group-item"><center><img ng-src="{{ item.posters.original }}" class="img-circle" style="height: 100px; width: 100px;"></center>
 						<br><h4 class="text-center text-primary">{{ item.title }}</h4></li>
-						<li class="list-group-item"><strong>Year:</strong> {{ item.year }}</li>
+						<li class="list-group-item list-group-item-info"><strong>Year:</strong> {{ item.year }}</li>
 						<li class="list-group-item"><strong><i class="fa fa-film"></i> Rated:</strong> {{ item.mpaa_rating }}</li>
 						<li class="list-group-item"><strong>Length:</strong> {{ item.runtime }} minutes</li>
 						<li class="list-group-item"><strong><i class="fa fa-star"></i> Critics Rating:</strong> {{ item.ratings.critics_rating }}</li>
