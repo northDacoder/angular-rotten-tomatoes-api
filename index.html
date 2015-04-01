@@ -22,14 +22,13 @@
 
 
 			<div class="row">
-				<ul ng-repeat="item in result" class="col-xs-12 col-sm-4">
-					<img ng-src="{{ item.posters.profile }}">
-					<li><h1 class="btn btn-default">Movie Title: {{ item.title }}</h1></li>
-					<li><h1 class="btn btn-info">Year: {{ item.year }}</h1></li>
-					<li><h1 class="btn btn-danger">Rating: {{ item.mpaa_rating }}</h1></li>
-					<li><h1 class="btn btn-primary">Length: {{ item.runtime }}</h1></li>
-					<br>
-					<li>From the Critics: <p>{{ item.critics_consensus }}</p></li>
+				<ul ng-repeat="item in result" class="col-xs-12 col-sm-4 list-group">
+					<li><img ng-src="{{ item.posters.profile }}"></li>
+					<li class="list-group-item">Movie Title: {{ item.title }}</li>
+					<li class="list-group-item">Year: {{ item.year }}</li>
+					<li class="list-group-item">Rating: {{ item.mpaa_rating }}</li>
+					<li class="list-group-item">Length: {{ item.runtime }}</li>
+					<li class="list-group-item">From the Critics: {{ item.critics_consensus }}</li>
 				</ul>
 			</div>
 
