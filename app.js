@@ -41,4 +41,6 @@ app.controller('movieController', function($scope, rotten_tomatoes){
 
 		});
 	}
+	
+	search("Harry Potter", 10);
 });
