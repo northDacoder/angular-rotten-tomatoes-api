@@ -42,5 +42,5 @@ app.controller('movieController', function($scope, rotten_tomatoes){
 		});
 	}
 	
-	search();
+	$scope.search();
 });
