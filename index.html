@@ -44,12 +44,12 @@
 						<div class="panel panel-info">
 							<div class="panel-heading">
 								<p class="lead">Year <span class="pull-right">{{ item.year }}</span></p>
-								<p class="lead"><i class="fa fa-film"></i> Rated: </p> <p class="lead">{{ item.mpaa_rating }}</p>
-								<p class="lead">Length:</p> <p class="lead pull-right">{{ item.runtime }} minutes</p>
-								<p class="lead"><i class="fa fa-star"></i> Critics Rating: </p> <p class="lead">{{ item.ratings.critics_rating }}</p>
-								<p class="lead"><i class="fa fa-star"></i> Critics Score: </p> <p class="lead"><span class="badge">{{ item.ratings.critics_score }}</span></p>
-								<p class="lead"><i class="fa fa-star-o"></i> Audience Rating: </p> <p class="lead">{{ item.ratings.audience_rating }}</p>
-								<p class="lead"><i class="fa fa-star-o"></i> Audience Score: </p> <p class="lead"><span class="badge">{{ item.ratings.audience_score }}</span></p>
+								<p class="lead"><i class="fa fa-film"></i> Rated: <span class="pull-right">{{ item.mpaa_rating }}</span></p>
+								<p class="lead">Length: <span class="pull-right">{{ item.runtime }} minutes</p>
+								<p class="lead"><i class="fa fa-star"></i> Critics Rating: <span class="pull-right">{{ item.ratings.critics_rating }}</span></p>
+								<p class="lead"><i class="fa fa-star"></i> Critics Score: <span class="badge pull-right">{{ item.ratings.critics_score }}</span></p>
+								<p class="lead"><i class="fa fa-star-o"></i> Audience Rating:  <span class="pull-right">{{ item.ratings.audience_rating }}</span></p>
+								<p class="lead"><i class="fa fa-star-o"></i> Audience Score: <span class="badge pull-right">{{ item.ratings.audience_score }}</span></p>
 							</div>
 						</div>
 					</div>
